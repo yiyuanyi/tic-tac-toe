@@ -7,7 +7,6 @@
 }
 
 #body {
-    display: flex;
     background-color: #f6d2ff;
 }
 
@@ -18,10 +17,26 @@
     width: 100%;
     height: 200px;
     background-color: #98d9e6;
+    border-bottom: solid 5px #090d47;
+    margin-bottom: 50px;
 }
 
 #page-header {
     font-family: 'Cutive Mono', monospace;
     font-weight: normal;
     font-size: 100px;
+}
+
+#game-board {
+    margin: 0 auto;
+    display: grid;
+    width: 450px;
+    height: 450px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.tile {
+    background-color: #FFF;
+    border: solid 2px #000;
 }
