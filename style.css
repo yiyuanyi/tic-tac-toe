@@ -37,6 +37,13 @@
 }
 
 .tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FFF;
     border: solid 2px #000;
+}
+
+.counter {
+    font-size: 90px;
 }
