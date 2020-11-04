@@ -1,5 +1,5 @@
 const gameBoard = (() => {
-    const counters = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X'];
+    const counters = ['X', 'O', 'O', 'X', 'X', 'O', 'X', 'O', 'X'];
     return { counters };
 })();
 
@@ -14,7 +14,10 @@ const player = ((name) => {
 function renderGameBoard() {
     const tiles = document.querySelectorAll('.tile');
     for (let i = 0; i < tiles.length; i++) {
-        let placedCounter = gameBoard.counters[i];
-        tiles[i].innerHTML = placedCounter;
+        const placedCounter = gameBoard.counters[i];
+        const para = document.createElement('p');
+        para.innerHTML = placedCounter;
+        para.classList.add('counter');
+        tiles[i].appendChild(para);
     }
 }
