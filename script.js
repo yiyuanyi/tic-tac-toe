@@ -13,9 +13,8 @@ const player = ((name) => {
 
 function renderGameBoard() {
     const tiles = document.querySelectorAll('.tile');
-    console.log(tiles.length);
     for (let i = 0; i < tiles.length; i++) {
         let placedCounter = gameBoard.counters[i];
-        console.log(gameBoard.counters[i]);
+        tiles[i].innerHTML = placedCounter;
     }
 }
