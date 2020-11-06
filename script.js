@@ -4,7 +4,7 @@ const gameBoard = (() => {
 })();
 
 const displayController = (() => {
-    
+    //render enter player names, play computer, reset button etc.
 })();
 
 const player = ((name) => {
@@ -14,10 +14,16 @@ const player = ((name) => {
 function renderGameBoard() {
     const tiles = document.querySelectorAll('.tile');
     for (let i = 0; i < tiles.length; i++) {
-        const placedCounter = gameBoard.counters[i];
-        const para = document.createElement('p');
-        para.innerHTML = placedCounter;
-        para.classList.add('counter');
-        tiles[i].appendChild(para);
+        
     }
 }
+
+    const board = document.querySelector('#board');
+    board.addEventListener('click', function(e) {
+        const counterLocation = e.target;
+        const para = document.createElement('p');
+        para.innerHTML = 'X';
+        para.classList.add('counter');
+        e.target.appendChild(para);
+    })
+
