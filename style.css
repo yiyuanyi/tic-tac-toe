@@ -27,7 +27,7 @@
     font-size: 100px;
 }
 
-#game-board {
+#board {
     margin: 0 auto;
     display: grid;
     width: 450px;
