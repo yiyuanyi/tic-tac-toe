@@ -27,6 +27,24 @@
     font-size: 100px;
 }
 
+#control-panel {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.enter-name {
+
+}
+
+.submit-name {
+
+}
+
+.restart-game {
+
+}
+
 #board {
     margin: 0 auto;
     display: grid;
