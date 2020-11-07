@@ -23,7 +23,7 @@ const displayController = (() => {
     }
 })();
 
-const playGame = () => {
+const playGame = (() => {
     const renderMarker = (e) => {
         if (!e.target.hasChildNodes()) {
             const para = document.createElement('p');
@@ -37,7 +37,10 @@ const playGame = () => {
         const board = document.querySelector('#board');
         board.addEventListener('click', renderMarker);
     }
-    placeMarker();
-}
+    
+    return {
+        placeMarker,
+    }
+})();
 
-window.addEventListener('load', playGame());
+window.addEventListener('load', playGame.placeMarker);
