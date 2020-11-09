@@ -44,18 +44,7 @@
     border-radius: 5px;
 }
 
-.submit {
-    width: 50px;
-    height: 20px;
-    background-color: #97e5cb;
-    border: solid 2px #009261;
-}
-
-.submit:hover {
-    background-color: #83c7b0;
-}
-
-#reset {
+.btn {
     width: 100px;
     height: 40px;
     background-color: #c59ce7;
@@ -63,7 +52,7 @@
     margin-bottom: 30px;
 }
 
-#reset:hover {
+.btn:hover {
     background-color: #a380c0;
 }
 
