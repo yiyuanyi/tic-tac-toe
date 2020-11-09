@@ -27,16 +27,15 @@ const displayController = (() => {
 })();
 
 const playGame = (() => {
-    const assignMarker = () => {
-        let markerCount = 0;
-        let marker = '';
-        markerCount % 2 == 0 ? marker = 'X' : marker = 'O';
-        markerCount++;
-    }
+
+    let markerCount = 0;
+    let marker = '';  
 
     const renderMarker = (e) => {
         if (!e.target.hasChildNodes()) {
             const para = document.createElement('p');
+            markerCount % 2 == 0 ? marker = 'X' : marker = 'O';
+            markerCount++;
             para.innerHTML = marker;
             para.classList.add('marker');
             e.target.appendChild(para);
@@ -49,7 +48,6 @@ const playGame = (() => {
     }
     
     return {
-        assignMarker,
         placeMarker,
     }
 })();
