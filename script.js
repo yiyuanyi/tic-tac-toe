@@ -1,5 +1,5 @@
 const gameBoard = (() => {
-    const markers = ['', '', '', '', '', '', '', '', ''];
+    const board = ['', '', '', '', '', '', '', '', ''];
 
     const winningCombos = [
         [0,1,2],[3,4,5],
@@ -13,30 +13,31 @@ const gameBoard = (() => {
 })();
 
 const displayController = (() => {
-
-    //empty results array
-
-    const renderButtons = () => {
-        //render new game button
-        //on click render inputs for player names
-    }
-    
+    const controlPanel = document.querySelector('#control-panel');
+   
     const player = ((name) => {
-        //set player name to name value from input
-        //set player1 to X and player 2 to O for markers
+        const getName = () => name;
     })
 
+
+
     return {
-        renderButtons,
         player,
     }
 })();
 
 const playGame = (() => {
+    const assignMarker = () => {
+        let markerCount = 0;
+        let marker = '';
+        markerCount % 2 == 0 ? marker = 'X' : marker = 'O';
+        markerCount++;
+    }
+
     const renderMarker = (e) => {
         if (!e.target.hasChildNodes()) {
             const para = document.createElement('p');
-            para.innerHTML = 'X';
+            para.innerHTML = marker;
             para.classList.add('marker');
             e.target.appendChild(para);
         }
@@ -48,8 +49,10 @@ const playGame = (() => {
     }
     
     return {
+        assignMarker,
         placeMarker,
     }
 })();
 
 window.addEventListener('load', playGame.placeMarker);
+
