@@ -12,7 +12,19 @@
     <h1 id="page-header">TIC-TAC-TOE</h1>
 </div>
 
-<div id="control-panel"></div>
+<form id="control-panel">
+    <div id="players">
+        <label for="player-1">Player 1:</label>
+        <input type="text" id="player-1">
+        <button type="button" id="p1-submit">Submit</button>
+        <label for="player-2">Player 2:</label>
+        <input type="text" id="player-2">
+        <button type="button" id="p2-submit">Submit</button>
+    </div>
+    <div id="new-game">
+        <button type="button" id="reset">New Game</button>
+    </div>
+</div>
 
 <div id="board">
     <div class="tile" data-value="1"></div>
